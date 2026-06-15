@@ -1,0 +1,111 @@
+:root{
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --grey-500: hsl(0, 0%, 42%);
+    --grey-950: hsl(0, 0%, 7%)
+}
+
+@font-face {
+    font-family: Figtree;
+    src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+html, body{
+    font-family: 'Figtree', sans-serif;
+    font-size: 16px;
+}
+
+*{
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--grey-950);
+}
+
+body{
+    background-color: var(--yellow);
+}
+
+main{
+    /* min-width: 80%; */
+    /* mobile first approach */
+    max-width: 80%;
+    margin: 150px auto;
+    height: 500px;
+    position: relative;
+
+    @media (min-width: 500px){
+        height: 600px;
+        width: 450px;
+    }
+}
+
+#black_bg{
+    background-color: var(--grey-950);
+    height: 100%;
+    width: 100%;
+    border-radius: 1.2rem;
+}
+
+#main_content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--white);
+    width: 98%;
+    height: 98%;
+    border-radius: 1.2rem;
+    border: 2px solid var(--grey-950);
+    position: absolute;
+    top: -5px;
+    padding: 1.2rem;
+
+    button{
+        background-color: var(--yellow);
+        padding: 0.5rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 0.5rem;
+    }
+
+    #img{
+        height: 200px;
+        width: 100%;
+        border-radius: 1.2rem;
+        background-image: url('assets/images/illustration-article.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @media (min-width: 500px){
+            height: 250px;
+        }
+    }
+
+    #txt_content{
+        margin-top: 30px;
+        height: fit-content;
+
+        h1 > a:active{
+            color: var(--yellow);
+        }
+
+        small{
+            color: var(--grey-500);
+
+            @media(min-width: 500px){
+                font-size: 18px;
+            }
+        }
+    }
+
+    h1 > a{
+        font-size: 22px;
+
+        @media (min-width: 500px) {
+            font-size: 30px;
+        }
+    }
+}
